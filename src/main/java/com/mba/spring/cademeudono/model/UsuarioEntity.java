@@ -10,7 +10,7 @@ public class UsuarioEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_ID")
-    private Long id;
+    private Long idUser;
 
     @Column(name = "USER_NAME")
     private String nome;
@@ -21,16 +21,17 @@ public class UsuarioEntity {
     @Column(name = "USER_EMAIL", unique = true)
     private String email;
 
-    @Column(name = "USER_ENDERECO")
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "ENDERECO_ID", nullable = false)
     private EnderecoEntity endereco;
 
     @Column(name = "USER_TELEFONE")
     private String telefone;
 
-    public Long getId() {return id;}
+    public Long getIdUser() {return idUser;}
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
     }
 
     public String getNome() {
@@ -78,14 +79,18 @@ public class UsuarioEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UsuarioEntity that = (UsuarioEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(nome, that.nome);
+        return Objects.equals(idUser, that.idUser) && Objects.equals(nome, that.nome);
     }
 
     @Override
     public String toString() {
         return "UsuarioEntity{" +
-                "id=" + id +
+                "idUser=" + idUser +
                 ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", email='" + email + '\'' +
+                ", endereco=" + endereco +
+                ", telefone='" + telefone + '\'' +
                 '}';
     }
 }
