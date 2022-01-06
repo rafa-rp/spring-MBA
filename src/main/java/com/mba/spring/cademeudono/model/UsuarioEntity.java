@@ -21,9 +21,8 @@ public class UsuarioEntity {
     @Column(name = "USER_EMAIL", unique = true)
     private String email;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "ENDERECO_ID", nullable = false)
-    private EnderecoEntity endereco;
+    @Column(name = "USER_CIDADE")
+    private String cidade;
 
     @Column(name = "USER_TELEFONE")
     private String telefone;
@@ -58,13 +57,9 @@ public class UsuarioEntity {
         this.email = email;
     }
 
-    public EnderecoEntity getEndereco() {
-        return endereco;
-    }
+    public String getCidade() {return cidade;}
 
-    public void setEndereco(EnderecoEntity endereco) {
-        this.endereco = endereco;
-    }
+    public void setCidade(String cidade) {this.cidade = cidade;}
 
     public String getTelefone() {
         return telefone;
@@ -89,7 +84,7 @@ public class UsuarioEntity {
                 ", nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
-                ", endereco=" + endereco +
+                ", cidade='" + cidade + '\'' +
                 ", telefone='" + telefone + '\'' +
                 '}';
     }

@@ -1,7 +1,6 @@
 package com.mba.spring.cademeudono.dto;
 
 import com.mba.spring.cademeudono.handler.MessageCodes;
-import com.mba.spring.cademeudono.model.EnderecoEntity;
 import com.mba.spring.cademeudono.model.UsuarioEntity;
 import org.hibernate.validator.constraints.Length;
 
@@ -25,7 +24,7 @@ public class UsuarioRequest {
     private String email;
 
     @NotBlank (message = MessageCodes.REQUIRED_FIELD)
-    private EnderecoEntity endereco;
+    private String cidade;
 
     @NotBlank(message = MessageCodes.REQUIRED_FIELD)
     @Length(min =11,max =11)
@@ -63,13 +62,9 @@ public class UsuarioRequest {
         this.email = email;
     }
 
-    public EnderecoEntity getEndereco() {
-        return endereco;
-    }
+    public String getCidade() {return cidade;}
 
-    public void setEndereco(EnderecoEntity endereco) {
-        this.endereco = endereco;
-    }
+    public void setCidade(String cidade) {this.cidade = cidade;}
 
     public String getTelefone() {
         return telefone;
@@ -84,7 +79,7 @@ public class UsuarioRequest {
         user.setNome(this.nome);
         user.setCpf(this.cpf);
         user.setEmail(this.email);
-        user.setEndereco(this.endereco);
+        user.setCidade(this.cidade);
         user.setTelefone(this.telefone);
 
         return user;

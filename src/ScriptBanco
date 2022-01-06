@@ -1,0 +1,12 @@
+INSERT INTO USUARIO_TABLE (USER_NAME, USER_CPF, USER_CIDADE, USER_ENDERECO, USER_TELEFONE)
+VALUES
+('Gabrielly Correia Pereira','111.111.111-11','gabrielly@fiap.com','Sao Paulo','11911111111'),
+('Jéssica Sales Reeleito','222.222.222-22','jessica@fiap.com','Sao Paulo','11922222222'),
+('Isnaldo Bulhões ','333.333.333-33','isnaldo@fiap.com','Sao Paulo','11933333333'),
+('Flaviano Melo Reeleito','444.444.444-44','flaviano@fiap.com','Sao Paulo','11944444444'),
+('Sérgio Toledo ','555.555.555-55','sergio@fiap.com','Sao Paulo','11955555555'),
+('Severino Pessoa ','666.666.666-66','severino@fiap.com','Sao Paulo','11966666666'),
+('Tereza Nelma ','777.777.777-77','tereza@fiap.com','Sao Paulo','11977777777'),
+('Perpetua Almeida','888.888.888-88','perpetua@fiap.com','Sao Paulo','11988888888'),
+('Nivaldo Albuquerque ','999.999.999-99','nivaldo@fiap.com','Sao Paulo','11999999999'),
+('Leda Sadala ','000.000.000-00','leda@fiap.com','Sao Paulo','11900000000');
