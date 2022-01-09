@@ -1,5 +1,6 @@
 package com.mba.spring.cademeudono.dto;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.mba.spring.cademeudono.handler.MessageCodes;
 import com.mba.spring.cademeudono.model.UsuarioEntity;
 import org.hibernate.validator.constraints.Length;
@@ -71,6 +72,15 @@ public class UsuarioRequest {
     }
 
     public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    @JsonCreator
+    public UsuarioRequest(String nome, String cpf, String email, String cidade, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.cidade = cidade;
         this.telefone = telefone;
     }
 
