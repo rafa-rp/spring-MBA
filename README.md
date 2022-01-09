@@ -4,7 +4,7 @@ Entregáveis - SEGUNDA ETAPA
 - Autor:Rafael Rossi Pereira / Michel Adriano Medeiros
 - Linguagem: Java 14
 - Banco de dados: MariaDB MySQL
-- Tecnologias: Spring, JPA, Hibernate, Thymeleaf
+- Tecnologias: Spring, JPA, Hibernate
 
 ## Objetivo
 Criar um serviço REST de cadastro e listagem de usuários que serão consumidos pelas aplicações desenvolvidas em outras etapas do curso.
