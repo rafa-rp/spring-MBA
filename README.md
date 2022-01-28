@@ -26,5 +26,5 @@ Criar um serviço REST de cadastro e listagem de usuários que serão consumidos
   "cpf": "111.111.111-11",
   "email": "fulanoteste@fiap.com",
   "cidade": "Sao Paulo",
-  "telefone": "11911111111"
+  "telefone": "11911111122"
   }
