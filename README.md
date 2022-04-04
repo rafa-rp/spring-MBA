@@ -1,20 +1,19 @@
-# ATIVIDADE - FRONT-END + BACK-END
-Entregáveis - SEGUNDA ETAPA
+# ATIVIDADE - Rest APP com Docker
 
 - Autor:Rafael Rossi Pereira / Michel Adriano Medeiros
 - Linguagem: Java 14
-- Banco de dados: MariaDB MySQL
-- Tecnologias: Spring, JPA, Hibernate
+- Banco de dados: MySQL
+- Tecnologias: Spring, JPA, Hibernate, Docker
 
 ## Objetivo
 Criar um serviço REST de cadastro e listagem de usuários que serão consumidos pelas aplicações desenvolvidas em outras etapas do curso.
 
 
 ## Para rodar o programa
-- Tenha o JDK 14 e um banco de dados MySQL instalados. (Exemplo utilizado: MariaDB Server)
-- Em seu banco de dados crie uma database com o nome de **fiap**
-- Configure o arquivo **application.properties** com o seu usuário e senha do banco de dados.
-- Baixe e execute o programa.
+- Tenha em sua máquina o docker e o docker-compose instalados
+- Utilize o comando -> ./gradlew build
+- Após buildar, rode o comando -> docker-compose up
+- A aplicação estara disponível localmente em sua porta 8080
 - O arquivo **ScriptBanco** tem como objetivo popular o banco de dados da aplicação. Execute a query que o arquivo contém em seu banco de dados.
 
 
